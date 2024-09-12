@@ -1,9 +1,7 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "@common/*": ["../typeorm/src/entities/"]
-        },
-        "outDir": "./dist"
-    }
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }
