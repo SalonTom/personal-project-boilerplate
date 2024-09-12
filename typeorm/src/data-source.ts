@@ -9,7 +9,7 @@ export const AppDataSource = new DataSource({
     username: "admin",
     password: "admin",
     database: "postgres",
-    entities: ["./build/entities/*.js"],
-    migrations: ["./build/migrations/*.js"],
+    entities: ["./src/entities/*.ts"],
+    migrations: ["./src/migrations/*.ts"],
     logging: true
 });
