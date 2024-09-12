@@ -2,7 +2,7 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@common/*": ["../typeorm/src/entities/"]
+            "@entities/*": ["../typeorm/src/entities/"]
         },
         "outDir": "./dist",
         "esModuleInterop": true

@@ -22,7 +22,7 @@
 
     /* Paths */
     "paths": {
-      "@common/*": ["../typeorm/src/entities/"]
+      "@entities/*": ["../typeorm/src/entities/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
