@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router';
 
 <template>
 
-  <{{ $t('HELLO_WORLD') }}
+  {{ $t('HELLO_WORLD') }}
 
   <RouterView/>
 </template>
