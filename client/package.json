@@ -5,10 +5,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "tailwind:build": "npx tailwindcss -i ./src/main.css -o ./src/assets/build.css --watch"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.20",
     "pinia": "^2.2.2",
+    "postcss": "^8.4.45",
+    "tailwindcss": "^3.4.11",
     "vue": "^3.4.37",
     "vue-i18n": "^10.0.1",
     "vue-router": "^4.4.4"
