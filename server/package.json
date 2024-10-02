@@ -4,17 +4,22 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-    "database:generate-models-1": "npx sequelize-auto -o ./database/models -d postgres_db -h localhost -u admin -x admin -p 5432 -e postgres",
-    "database:generate-models": "npx sequelize-auto -o ./database/models -d mysql -h localhost -u root -x root -p 3305 -e mysql",
-    "database:create-migration": "npx sequelize migration:create --migrations-path database/migrations --models-path ../common/models --config database/config/config.json --name migration",
+    "server:start": "nodemon -r tsconfig-paths/register app.ts",
     "database:run-container": "podman run --name local_db -e POSTGRES_PASSWORD=admin -e POSTGRES_USER=admin -e POSTGRES_DB=postgres_db -p 5432:5432 -d postgres",
-    "generate-typescript-and-sequelize-models-postgres": "npx sequelize-auto -o ../common/models -d postgres_db -h localhost -u admin -x admin -e postgres -l ts",
     "container-pgadmin": "podman run --name postgres_admin -e PGADMIN_DEFAULT_EMAIL=admin@admin.fr -e PGADMIN_DEFAULT_PASSWORD=admin -p 80:80 -p 5433:5432 -d dpage/pgadmin4"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "nodemon": "^3.1.7",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "fs": "^0.0.1-security",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0"
   }
 }
