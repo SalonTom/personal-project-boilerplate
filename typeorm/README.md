@@ -1,7 +1,8 @@
 # Process de creation de la base de données
 
-Utilisation de pgadmin 4 et de son tool de diagram pour bdd pour générer le schema de bdd
-Export et placer le fichier schema.sql dans le bon dossier
+Utilisation de pgadmin 4 et de son tool de diagram pour bdd pour générer le schema de bdd.
+Ne pas oublier de lancer le container avec la bdd locale et d'appliquer le script sql si nécessaire.
+Export et placer le fichier schema.sql dans le bon dossier.
 
 
 # Process génération typeorm models
