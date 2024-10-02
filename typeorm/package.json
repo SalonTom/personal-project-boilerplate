@@ -14,7 +14,11 @@
       "pg": "^8.4.0"
    },
    "scripts": {
-      "start": "ts-node src/index.ts",
+      "schema:build": "node scripts/generate-models.js",
+      "migrations:init": "typeorm migration:create src/migrations/init",
+      "migrations:generate": "typeorm migration:generate -- ./src/migrations/migration -d ./src/data-source.ts",
+      "migrations:run": "typeorm migration:run -- -d ./src/data-source.ts",
+      "migrations:revert": "typeorm migration:revert -- -d ./src/data-source.ts",
       "typeorm": "typeorm-ts-node-commonjs"
    }
 }

@@ -5,8 +5,8 @@
   "main": "app.ts",
   "scripts": {
     "server:start": "nodemon -r tsconfig-paths/register app.ts",
-    "database:run-container": "podman run --name local_db -e POSTGRES_PASSWORD=admin -e POSTGRES_USER=admin -e POSTGRES_DB=postgres_db -p 5432:5432 -d postgres",
-    "container-pgadmin": "podman run --name postgres_admin -e PGADMIN_DEFAULT_EMAIL=admin@admin.fr -e PGADMIN_DEFAULT_PASSWORD=admin -p 80:80 -p 5433:5432 -d dpage/pgadmin4"
+    "database:run-container": "docker run --name local_db -e POSTGRES_PASSWORD=admin -e POSTGRES_USER=admin -e POSTGRES_DB=postgres_db -p 5432:5432 -d postgres",
+    "container-pgadmin": "docker run --name postgres_admin -e PGADMIN_DEFAULT_EMAIL=admin@admin.fr -e PGADMIN_DEFAULT_PASSWORD=admin -p 80:80 -p 5433:5432 -d dpage/pgadmin4"
   },
   "keywords": [],
   "author": "",
