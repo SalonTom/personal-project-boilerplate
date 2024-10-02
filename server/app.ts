@@ -1,22 +1,21 @@
 import express from "express";
 import { configDotenv } from "dotenv";
-
-// Set up app
-const app = express();
+import RoutesRegistrationUtils from "./utils/routing/routesRegistrationUtils";
 
 // Load env variables
 configDotenv();
 
-// App port
-const port = process.env.PORT || 3000;
+// Set up app
+const app = express();
 
 // Allow body parsing
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Hello world !')
-});
+// App port
+const port = process.env.PORT || 3000;
+
+RoutesRegistrationUtils.registerRoutesAsync(app);
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`App listening on port ${port}`)
 });

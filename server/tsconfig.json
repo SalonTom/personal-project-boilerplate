@@ -1,10 +1,10 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "@entities/*": ["../typeorm/src/entities/"]
-        },
-        "outDir": "./dist",
-        "esModuleInterop": true
+      "baseUrl": "./",
+      "paths": {
+        "@entities/*": ["../typeorm/src/entities/*"]
+      },
+      "outDir": "./dist",
+      "esModuleInterop": true
     }
-}
+  }
