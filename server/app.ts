@@ -16,6 +16,10 @@ const port = process.env.PORT || 3000;
 
 RoutesRegistrationUtils.registerRoutesAsync(app);
 
+// Add the routes that aren't related to the entities directly here.
+
+// TODO : login + register default routes
+
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)
 });
